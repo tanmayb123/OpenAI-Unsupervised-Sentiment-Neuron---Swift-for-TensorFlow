@@ -1,0 +1,6 @@
+Seed text
+Sequence length
+Temperature
+Neuron to visualize
+Value to overwrite -- default: -0.0012
+File to save visualization to
