@@ -1,6 +1,6 @@
 import TensorFlow
 
-enableGPU()
+//enableGPU()
 
 import Python
 

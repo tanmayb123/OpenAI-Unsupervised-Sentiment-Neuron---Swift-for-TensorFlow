@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2110825357CB7F08071325028804FF29 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26B8A1A7911A705E6C516039C6AE952 /* main.swift */; };
+		3C8C95299CC3421E9F327DCE85099785 /* libtensorflow.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACEBBA35BD817EA1DB3CE987DF5E4F9 /* libtensorflow.so */; };
+		75F8BEE8AB0A0D37EE4EF3BBF1B8A5DB /* libtensorflow_framework.so in Frameworks */ = {isa = PBXBuildFile; fileRef = F4666665245D556A16C9ECBCDD0B166B /* libtensorflow_framework.so */; };
+		7725AE301AB0D76331158A89E2A212C3 /* Imports.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00DD1430AF150259CD5FBACA2CAF16C /* Imports.swift */; };
+		7DF79E134BC88E5C6DB3AE119B3708ED /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AA0F09815DF22218CA9D7EE8EDB151 /* Model.swift */; };
+		833F93BA223FCB7F00D1B2F2 /* libpython2.7.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 833F93B9223FCB7F00D1B2F2 /* libpython2.7.tbd */; };
+		E73B0B2029D151B902FCD8897197A8FD /* VisGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21619E38D0DA05E67C70149AB904C80 /* VisGen.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4ACEBBA35BD817EA1DB3CE987DF5E4F9 /* libtensorflow.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtensorflow.so; path = "/Library/Developer/Toolchains/swift-latest/usr/lib/swift/macosx/libtensorflow.so"; sourceTree = "<group>"; };
+		78AA0F09815DF22218CA9D7EE8EDB151 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		833F93B9223FCB7F00D1B2F2 /* libpython2.7.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libpython2.7.tbd; path = usr/lib/libpython2.7.tbd; sourceTree = SDKROOT; };
+		A21619E38D0DA05E67C70149AB904C80 /* VisGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisGen.swift; sourceTree = "<group>"; };
+		B00DD1430AF150259CD5FBACA2CAF16C /* Imports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imports.swift; sourceTree = "<group>"; };
+		BC05D7B399F015B218D3B4F7462B9247 /* SwiftTensorflow */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = text; path = SwiftTensorflow; sourceTree = BUILT_PRODUCTS_DIR; };
+		C26B8A1A7911A705E6C516039C6AE952 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F4666665245D556A16C9ECBCDD0B166B /* libtensorflow_framework.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtensorflow_framework.so; path = "/Library/Developer/Toolchains/swift-latest/usr/lib/swift/macosx/libtensorflow_framework.so"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C90AE2761C973DBE2E5BB18F59297C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				833F93BA223FCB7F00D1B2F2 /* libpython2.7.tbd in Frameworks */,
+				75F8BEE8AB0A0D37EE4EF3BBF1B8A5DB /* libtensorflow_framework.so in Frameworks */,
+				3C8C95299CC3421E9F327DCE85099785 /* libtensorflow.so in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		013CF2384A2DA806A359CEC2E1FB43EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC05D7B399F015B218D3B4F7462B9247 /* SwiftTensorflow */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07A96C52CCBA6778D29098CC0100DE3D = {
+			isa = PBXGroup;
+			children = (
+				CFD3B7BF1A6E3F5327D5451B43B61577 /* Sources */,
+				5A15216EEAE334619F896FCFC1E1131A /* Frameworks */,
+				013CF2384A2DA806A359CEC2E1FB43EE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A15216EEAE334619F896FCFC1E1131A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				833F93B9223FCB7F00D1B2F2 /* libpython2.7.tbd */,
+				F4666665245D556A16C9ECBCDD0B166B /* libtensorflow_framework.so */,
+				4ACEBBA35BD817EA1DB3CE987DF5E4F9 /* libtensorflow.so */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFD3B7BF1A6E3F5327D5451B43B61577 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B00DD1430AF150259CD5FBACA2CAF16C /* Imports.swift */,
+				C26B8A1A7911A705E6C516039C6AE952 /* main.swift */,
+				78AA0F09815DF22218CA9D7EE8EDB151 /* Model.swift */,
+				A21619E38D0DA05E67C70149AB904C80 /* VisGen.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C6DB77B31ABFEC4B06AE065A4F4230C /* SwiftTensorflow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8238F02204855E729E0DA7357064A66C /* Build configuration list for PBXNativeTarget "SwiftTensorflow" */;
+			buildPhases = (
+				7D7EA10C8BEA29FAA1238320FF522FAD /* Sources */,
+				1C90AE2761C973DBE2E5BB18F59297C6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftTensorflow;
+			productName = SwiftTensorflow;
+			productReference = BC05D7B399F015B218D3B4F7462B9247 /* SwiftTensorflow */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D6193815E8545F68D9FCBB03F7300FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+			};
+			buildConfigurationList = E86058EA3C2DD232E288B9471D771A37 /* Build configuration list for PBXProject "SwiftTensorflow" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 07A96C52CCBA6778D29098CC0100DE3D;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C6DB77B31ABFEC4B06AE065A4F4230C /* SwiftTensorflow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D7EA10C8BEA29FAA1238320FF522FAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7725AE301AB0D76331158A89E2A212C3 /* Imports.swift in Sources */,
+				7DF79E134BC88E5C6DB3AE119B3708ED /* Model.swift in Sources */,
+				E73B0B2029D151B902FCD8897197A8FD /* VisGen.swift in Sources */,
+				2110825357CB7F08071325028804FF29 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0D7AECBD03D199A728B33FAA4FC0C37F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3C5D7443F18CEC400DC2EB3EE9345F2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\".\"",
+					"\"/Library/Developer/Toolchains/swift-latest/usr/lib/swift/macosx\"",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "/Library/Developer/Toolchains/swift-latest/usr/lib/swift/macosx/";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_LDFLAGS = "-lpython";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftTensorflow.SwiftTensorflow;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		414A9FC13F649D986920ADA57AABC4BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		A43FA1F996C4F100B099335D0C8E5B30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\".\"",
+					"\"/Library/Developer/Toolchains/swift-latest/usr/lib/swift/macosx\"",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "/Library/Developer/Toolchains/swift-latest/usr/lib/swift/macosx/";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_LDFLAGS = "-lpython";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftTensorflow.SwiftTensorflow;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8238F02204855E729E0DA7357064A66C /* Build configuration list for PBXNativeTarget "SwiftTensorflow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A43FA1F996C4F100B099335D0C8E5B30 /* Debug */,
+				3C5D7443F18CEC400DC2EB3EE9345F2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+		E86058EA3C2DD232E288B9471D771A37 /* Build configuration list for PBXProject "SwiftTensorflow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				414A9FC13F649D986920ADA57AABC4BD /* Debug */,
+				0D7AECBD03D199A728B33FAA4FC0C37F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D6193815E8545F68D9FCBB03F7300FB /* Project object */;
+}

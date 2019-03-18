@@ -1,5 +1,7 @@
-public struct Linear: Layer {
+import TensorFlow
 
+public struct Linear: Layer {
+    
     public var w: Tensor<Float>
     public var b: Tensor<Float>
 
@@ -9,7 +11,7 @@ public struct Linear: Layer {
     }
 
     @differentiable(wrt: (self, input))
-    public func applied(to input: Tensor<Float>) -> Tensor<Float> {
+    public func applied(to input: Tensor<Float>, in context: Context) -> Tensor<Float>{
         return matmul(input, w) + b
     }
 
@@ -24,7 +26,7 @@ public struct LinearSansBias: Layer {
     }
 
     @differentiable(wrt: (self, input))
-    public func applied(to input: Tensor<Float>) -> Tensor<Float> {
+    public func applied(to input: Tensor<Float>, in context: Context) -> Tensor<Float>{
         return matmul(input, w)
     }
 
@@ -85,13 +87,13 @@ public struct mLSTM: Layer {
     }
 
     @differentiable(wrt: (self, input))
-    public func applied(to input: mLSTMInput) -> mLSTMHiddenState {
-        let m = wmx.applied(to: input.data) * wmh.applied(to: input.hidden.h)
+    public func applied(to input: mLSTMInput, in context: Context) -> mLSTMHiddenState {
+        let m = wmx.applied(to: input.data,in:context) * wmh.applied(to: input.hidden.h,in:context)
 
-        let i = sigmoid(wxI.applied(to: input.data) + whI.applied(to: m))
-        let f = sigmoid(wxF.applied(to: input.data) + whF.applied(to: m))
-        let u = tanh(wxU.applied(to: input.data) + whU.applied(to: m))
-        let o = sigmoid(wxO.applied(to: input.data) + whO.applied(to: m))
+        let i = sigmoid(wxI.applied(to: input.data,in:context) + whI.applied(to: m,in:context))
+        let f = sigmoid(wxF.applied(to: input.data,in:context) + whF.applied(to: m,in:context))
+        let u = tanh(wxU.applied(to: input.data,in:context) + whU.applied(to: m,in:context))
+        let o = sigmoid(wxO.applied(to: input.data,in:context) + whO.applied(to: m,in:context))
 
         let cy = f * input.hidden.c + i * u
         let hy = o * tanh(cy)
@@ -124,9 +126,9 @@ public struct StackedLSTM: Layer {
     }
 
     @differentiable(wrt: (self, input))
-    public func applied(to input: mLSTMInput) -> StackedLSTMOutput {
-        let rnnOutput = rnn.applied(to: input)
-        let output = softmax(h2o.applied(to: rnnOutput.h))
+    public func applied(to input: mLSTMInput, in context: Context) -> StackedLSTMOutput{
+        let rnnOutput = rnn.applied(to: input,in:context)
+        let output = softmax(h2o.applied(to: rnnOutput.h,in: context))
         return StackedLSTMOutput(hidden: mLSTMHiddenState(h: rnnOutput.h, c: rnnOutput.c), output: output)
     }
 
@@ -159,8 +161,8 @@ public struct LanguageModelling: Layer {
     }
 
     @differentiable(wrt: (self, input))
-    public func applied(to input: LanguageModellingInput) -> StackedLSTMOutput {
-        let embedding = embed.applied(to: input.inputCharacter)
+    public func applied(to input: LanguageModellingInput, in context: Context) -> StackedLSTMOutput{
+        let embedding = embed.applied(to: input.inputCharacter,in: context)
         return rnn.applied(to: mLSTMInput(data: embedding, hidden: input.hiddenState))
     }
 
